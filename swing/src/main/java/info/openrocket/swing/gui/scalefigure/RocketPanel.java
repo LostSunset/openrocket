@@ -46,6 +46,7 @@ import javax.swing.tree.TreeSelectionModel;
 import info.openrocket.core.aerodynamics.AerodynamicCalculator;
 import info.openrocket.core.aerodynamics.BarrowmanCalculator;
 import info.openrocket.core.aerodynamics.FlightConditions;
+import info.openrocket.core.logging.Warning;
 import info.openrocket.core.logging.WarningSet;
 import info.openrocket.core.document.OpenRocketDocument;
 import info.openrocket.core.document.Simulation;
@@ -1000,11 +1001,7 @@ public class RocketPanel extends JPanel implements TreeSelectionListener, Change
 	private boolean updateFlightData(Simulation sim) {
 		FlightConfigurationId curID = document.getSelectedConfiguration().getFlightConfigurationID();
 		if (sim.getFlightConfigurationId().compareTo(curID) == 0) {
-			if (sim.hasSimulationData()) {
-				extraText.setFlightData(sim.getSimulatedData());
-			} else {
-				extraText.setFlightData(FlightData.NaN_DATA);
-			}
+			extraText.setSimulation(sim);
 			return true;
 		}
 		return false;
