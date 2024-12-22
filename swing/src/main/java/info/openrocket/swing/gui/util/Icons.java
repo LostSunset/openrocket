@@ -89,7 +89,7 @@ public class Icons {
 	public static final Icon HELP_BUG_REPORT = loadImageIcon("pix/icons/help-bug.png", "Bug report");
 	public static final Icon HELP_DEBUG_LOG = loadImageIcon("pix/icons/help-log.png", "Debug log");
 	public static final Icon HELP_TOURS = loadImageIcon("pix/icons/help-tours.png", "Guided tours");
-	public static final Icon WIKI = loadImageIcon("pix/icons/wiki.png", "Wiki (Documentation)");
+	public static final Icon DOCUMENTATION = loadImageIcon("pix/icons/documentation.png", "Documentation");
 
 	public static final Icon ZOOM_IN = loadImageIcon("pix/icons/zoom-in.png", "Zoom in");
 	public static final Icon ZOOM_OUT = loadImageIcon("pix/icons/zoom-out.png", "Zoom out");
@@ -105,9 +105,9 @@ public class Icons {
 	public static final Icon NOT_FAVORITE = loadImageIcon("pix/icons/star_silver.png", "Not favorite");
 	public static final Icon FAVORITE = loadImageIcon("pix/icons/star_gold.png", "Favorite");
 
-	public static final Icon WARNING_LOW = loadImageIcon("pix/icons/warning_low.png", "Informative Warning");
+	public static final Icon WARNING_LOW = loadImageIcon("pix/icons/warning_low.png", "Informational");
 	public static final Icon WARNING_NORMAL = loadImageIcon("pix/icons/warning_normal.png", "Warning");
-	public static final Icon WARNING_HIGH = loadImageIcon("pix/icons/warning_high.png", "Critical Warning");
+	public static final Icon WARNING_HIGH = loadImageIcon("pix/icons/warning_high.png", "Critical");
 
 	public static final Icon MASS_OVERRIDE_LIGHT = loadImageIcon("pix/icons/mass-override_light.png", "Mass Override");
 	public static final Icon MASS_OVERRIDE_DARK = loadImageIcon("pix/icons/mass-override_dark.png", "Mass Override");

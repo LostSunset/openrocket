@@ -15,8 +15,8 @@ Release Notes
 
 <div id="24.12.beta.01">
  
-OpenRocket 24.12.beta.01 (2024-12-XX)
-------------------------
+OpenRocket 24.12.beta.01 (2024-12-20)
+-------------------------------------
 
 Notable features and fixes in **bold**.
 
@@ -25,6 +25,7 @@ Notable features and fixes in **bold**.
 * **Multi-level wind input**: Configure different wind settings at different altitudes (in the simulation configuration dialog).
 * **New Component Analysis Parameter Sweep Tool**: Plot and export Component Analysis parameter sweeps in the new Component Analysis Plot/Export tab. For instance, you can plot the rocket CD as a function of Mach number.
 * **SVG Fin Export**: Export fin shapes directly to SVG for laser cutting or importing into CAD tools.
+* **Expanded Platform Support**: We now offer installers for x86_64 and Arm64 on Windows, Mac, and Linux.
 * **Project documentation moved to Sphinx**: See it at https://openrocket.readthedocs.io/.
 
 ### Simulation
@@ -83,8 +84,9 @@ As mentioned above, a lot of work went into the Simulation tab for this release,
 * **Add stage separation options for deployable payloads and a deployable payload example** (fixes #852, #2519): We had many requests for this from various competition participants.
 * Don't add motor delay time to upper stage motor ignition time (fixes #2450)
 
-### Parachute Preset Library
+### Preset Library
 * **Fix parachute length resizing when using preset parachute**: Lots of folks reported this one.
+* **Fix transition and nose cone component presets defaulting to a filled shape** (fixes #2480 and #2614)
 * Correct diameter of Spherachutes to match Cd (fixes #2517)
 * Fix sorting problems in preset library (fixes #2576)
 
@@ -105,6 +107,7 @@ As mentioned above, a lot of work went into the Simulation tab for this release,
 ### Project
 * **Move project documentation to Sphinx**
 * **Switched build system from Ant to Gradle**
+* **Added Arm64 support for Windows and Linux**
 * Adopted Java Platform Module System
 
 ### Misc
