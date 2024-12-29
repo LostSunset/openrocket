@@ -106,7 +106,7 @@ public class SimulationPanel extends JPanel {
 	private final OpenRocketDocument document;
 
 	private final ColumnTableModel simulationTableModel;
-	private final JTable simulationTable;
+	private final ColumnTable simulationTable;
 
 	private final JButton editButton;
 	private final JButton runButton;
@@ -207,6 +207,7 @@ public class SimulationPanel extends JPanel {
 		simulationTable.setDefaultRenderer(Object.class, new JLabelRenderer());
 		simulationTable.setDefaultRenderer(WarningsBox.class, new WarningsBoxRenderer());
 		simulationTableModel.setColumnWidths(simulationTable.getColumnModel());
+		simulationTable.setupAutoSizeColumns();
 		simulationTable.setFillsViewportHeight(true);
 
 		// Unregister the default actions that would otherwise conflict with RocketActions and their acceleration keys
@@ -339,7 +340,7 @@ public class SimulationPanel extends JPanel {
 		UITheme.Theme.addUIThemeChangeListener(SimulationPanel::updateColors);
 	}
 
-	private static void updateColors() {
+	public static void updateColors() {
 		dimTextColor = GUIUtil.getUITheme().getDimTextColor();
 		warningColor = GUIUtil.getUITheme().getWarningColor();
 		errorColor = GUIUtil.getUITheme().getErrorColor();
@@ -1366,7 +1367,7 @@ public class SimulationPanel extends JPanel {
 					},
 
 					//// Warnings column
-					new Column(trans.get("simpanel.col.Warnings")) {
+					new Column(trans.get("simpanel.col.Warnings"), true, false) {
 						private WarningsBox box = null;
 
 						@Override
@@ -1388,7 +1389,7 @@ public class SimulationPanel extends JPanel {
 
 						@Override
 						public int getDefaultWidth() {
-							return 80;
+							return 40;
 						}
 
 						@Override
