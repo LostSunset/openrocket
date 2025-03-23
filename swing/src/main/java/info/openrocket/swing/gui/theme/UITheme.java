@@ -1903,6 +1903,7 @@ public class UITheme {
 		public Color getStatusColor(Status status) {
 			switch (status) {
 			case ABORTED:
+            case CANT_RUN:
 				return getErrorColor();
 				
 			case OUTDATED:
@@ -1915,9 +1916,7 @@ public class UITheme {
     }
 
     private static void preApplyTheme() {
-        final SwingPreferences prefs = (SwingPreferences) Application.getPreferences();
         FlatAnimatedLafChange.showSnapshot();
-
         FlatLaf.registerCustomDefaultsSource("themes");
     }
 
